@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios - Veterinaria Salud Animal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Servicios de Veterinaria Salud Animal</h1>
+</header>
+
+<nav>
+    <a href="index.html">Inicio</a>
+    <a href="solicitar_turno.html">Solicitar Turno</a>
+    <a href="registrarse.html">Registrarse</a>
+    <a href="terminos.html">Términos y Condiciones</a>
+    <a href="servicios.html">Servicios</a>
+</nav>
+
+<section>
+    <div class="service">
+        <h2>Castración</h2>
+        <img src="castracion.jpg" alt="Castración">
+        <p>Ofrecemos servicios de castración para perros y gatos, garantizando un procedimiento seguro y profesional.</p>
+        <button class="toggle-btn" onclick="toggleInfo('info-castracion', this)"></button>
+        <div id="info-castracion" class="more-info">
+            <p>La castración ayuda a controlar la población de mascotas y prevenir ciertas enfermedades. Nuestro equipo está altamente capacitado para asegurar que el procedimiento se realice de manera segura.</p>
+        </div>
+    </div>
+
+    <div class="service">
+        <h2>Cementerio para Mascotas</h2>
+        <img src="cementerio.jpg" alt="Cementerio">
+        <p>Un lugar digno y respetuoso para despedir a tus mascotas. Ofrecemos servicios de cremación y entierro.</p>
+        <button class="toggle-btn" onclick="toggleInfo('info-cementerio', this)"></button>
+        <div id="info-cementerio" class="more-info">
+            <p>Nuestro cementerio para mascotas ofrece un ambiente tranquilo para despedir a tus seres queridos. Disponemos de varias opciones de servicios para satisfacer tus necesidades.</p>
+        </div>
+    </div>
+
+    <div class="service">
+        <h2>Juegos y Actividades</h2>
+        <img src="juegos.jpg" alt="Juegos">
+        <p>Contamos con una variedad de juegos y actividades para mantener a tus mascotas felices y saludables.</p>
+        <button class="toggle-btn" onclick="toggleInfo('info-juegos', this)"></button>
+        <div id="info-juegos" class="more-info">
+            <p>Ofrecemos espacios dedicados para que tus mascotas puedan socializar y ejercitarse. Además, contamos con una variedad de juguetes y actividades diseñadas para estimular su mente y cuerpo.</p>
+        </div>
+    </div>
+
+    <div class="service">
+        <h2>Vacunaciones</h2>
+        <img src="vacunacion.png" alt="Vacunación">
+        <p>Realizamos todas las vacunas necesarias para mantener a tu mascota protegida contra enfermedades.</p>
+        <button class="toggle-btn" onclick="toggleInfo('info-vacunacion', this)"></button>
+        <div id="info-vacunacion" class="more-info">
+            <p>Las vacunas son cruciales para prevenir enfermedades graves. Ofrecemos un calendario de vacunación adaptado a las necesidades de tu mascota, siguiendo las recomendaciones de los veterinarios.</p>
+        </div>
+    </div>
+
+    <div class="service">
+        <h2>Desparasitaciones</h2>
+        <img src="desparasitacion.jpg" alt="Desparasitación">
+        <p>Ofrecemos tratamientos efectivos para la desparasitacion interna y externa de tu mascota.</p>
+        <button class="toggle-btn" onclick="toggleInfo('info-desparasitacion', this)"></button>
+        <div id="info-desparasitacion" class="more-info">
+            <p>La desparasitacion es esencial para mantener a tu mascota libre de parásitos. Realizamos análisis y tratamientos adecuados para garantizar su bienestar.</p>
+        </div>
+    </div>
+
+    <div class="service">
+        <h2>Chequeos Generales</h2>
+        <img src="chequeo.jpg" alt="Chequeo General">
+        <p>Realizamos chequeos generales para asegurar que tu mascota esté en óptimas condiciones de salud.</p>
+        <button class="toggle-btn" onclick="toggleInfo('info-chequeo', this)"></button>
+        <div id="info-chequeo" class="more-info">
+            <p>Los chequeos regulares ayudan a detectar problemas de salud antes de que se conviertan en condiciones graves. Evaluamos la salud general de tu mascota y recomendamos tratamientos si es necesario.</p>
+        </div>
+    </div>
+
+    <div class="service">
+        <h2>Urgencias</h2>
+        <img src="urgencias.jpg" alt="Urgencias">
+        <p>Atención de emergencias para tu mascota en cualquier momento del día.</p>
+        <button class="toggle-btn" onclick="toggleInfo('info-urgencias', this)"></button>
+        <div id="info-urgencias" class="more-info">
+            <p>Nuestra clínica está equipada para manejar emergencias y proporcionar atención urgente a tu mascota. Estamos disponibles 24/7 para cualquier situación crítica.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2024 Veterinaria Salud Animal. Todos los derechos reservados.</p>
+</footer>
+
+<script>
+    function toggleInfo(id, button) {
+        const infoDiv = document.getElementById(id);
+        if (infoDiv.style.display === "none" || infoDiv.style.display === "") {
+            infoDiv.style.display = "block";
+            button.classList.add('active');
+        } else {
+            infoDiv.style.display = "none";
+            button.classList.remove('active');
+        }
+    }
+</script>
+
+</body>
+</html>

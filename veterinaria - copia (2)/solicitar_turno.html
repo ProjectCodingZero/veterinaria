@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitar Turno - Veterinaria Salud Animal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Solicitar Turno</h1>
+</header>
+
+<nav>
+    <a href="index.html">Inicio</a>
+    <a href="solicitar_turno.html">Solicitar Turno</a>
+    <a href="registrarse.html">Registrarse</a>
+    <a href="terminos.html">Términos y Condiciones</a>
+    <a href="servicios.html">Servicios</a>
+</nav>
+
+<section>
+    <h2>Complete el formulario para solicitar un turno</h2>
+    <form>
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+        <label for="telefono">Teléfono:</label><br>
+        <input type="text" id="telefono" name="telefono" required><br><br>
+        <label for="fecha">Fecha deseada:</label><br>
+        <input type="date" id="fecha" name="fecha" required><br><br>
+        <label for="servicio">Servicio:</label><br>
+        <select id="servicio" name="servicio" required>
+            <option value="consulta">Consulta General</option>
+            <option value="vacunacion">Vacunación</option>
+            <option value="cirugia">Cirugía</option>
+        </select><br><br>
+        <input type="submit" value="Solicitar Turno">
+    </form>
+</section>
+
+<footer>
+    <p>© 2024 Veterinaria Salud Animal. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>
