@@ -1,0 +1,10 @@
+services:
+  mysql:
+    image: 'mysql:latest'
+    environment:
+      - "MYSQL_RANDOM_ROOT_PASSWORD: 1"
+      - "MYSQL_DATABASE: veterinaria"
+      - "MYSQL_USER: user"
+      - "MYSQL_PASSWORD: 1234"
+    ports:
+      - '3306'
