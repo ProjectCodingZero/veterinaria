@@ -1,10 +1,20 @@
+name: be-vet
 services:
-  mysql:
-    image: 'mysql:latest'
+  app:
+    build:
+      dockerfile: Dockerfile
+      context: .
+  db:
+    image: "mysql:latest"
+    volumes:
+      - "mysql:/var/lib/mysql"
+      - "./dump.sql:/docker-entrypoint-initdb.d/1-dump.sql"
     environment:
-      - "MYSQL_RANDOM_ROOT_PASSWORD: 1"
-      - "MYSQL_DATABASE: veterinaria"
-      - "MYSQL_USER: user"
-      - "MYSQL_PASSWORD: 1234"
+        MYSQL_ROOT_PASSWORD: "1234"
+        MYSQL_DATABASE: "veterinaria"
+        MYSQL_USER: "user"
+        MYSQL_PASSWORD: "1234"
     ports:
-      - '3306'
+      - "8080:3306"
+volumes:
+  mysql:
